@@ -1,0 +1,46 @@
+<div class="chatlog__embed">
+
+    <div class="chatlog__embed-color-pill" style="background-color: ${P.hexColor}"></div>
+
+    <div class="chatlog__embed-content-container">
+
+        <div class="chatlog__embed-content">
+
+            <div class="chatlog__embed-text">
+
+                    <div class="chatlog__embed-author">
+                            <img class="chatlog__embed-author-icon" src="${P.author?.iconURL}">
+
+                            <span class="chatlog__embed-author-name">
+                                    <a class="chatlog__embed-author-name-link" href="${P.author?.url}">${P.author?.name ? P.author.name : ''}</a>
+                            </span>
+                    </div>
+
+                    <div class="chatlog__embed-description">
+                        <div class="markdown preserve-whitespace">${P.description ? P.description : ''}</div>
+                    </div>
+
+            </div>
+
+            <div class="chatlog__embed-thumbnail-container">
+                <img class="chatlog__embed-thumbnail" src="${P.thumbnail}">
+            </div>
+
+        </div>
+
+        <div class="chatlog__embed-image-container">
+            <img class="chatlog__embed-image" src="${P.image?.url}">
+        </div>
+
+        <div class="chatlog__embed-video-container">
+            <iframe class="chatlog__embed-youtube" src="${P.video?.url}" width="400" height="225"></iframe>
+        </div>
+
+        <div class="chatlog__embed-footer">
+            <img class="chatlog__embed-footer-icon" src="${P.footer?.iconURL}">
+            <span class="chatlog__embed-footer-text">${P.footer?.text ? P.footer.text : ''}</span>
+        </div>
+
+    </div>
+
+</div>

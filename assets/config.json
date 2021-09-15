@@ -1,0 +1,29 @@
+{
+    "owner": "",
+    
+    "guilds": {
+        "development": ""
+    },
+    
+    "tokens": {
+        "public": "",
+        "beta": ""
+    },
+
+    "colors": {
+        "embeds": ""
+    },
+    
+    "mysql": {
+        "host": "",
+        "database": "",
+        "user": "",
+        "password": ""
+    },
+
+    "authentification": {
+        "perspective": {
+            "key": ""
+        }
+    }
+}

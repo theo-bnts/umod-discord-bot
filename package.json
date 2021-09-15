@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "utility",
+  "version": "4.7.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Théo Bontemps",
+  "license": "ISC",
+  "dependencies": {
+    "asdfjkl": "^0.0.6",
+    "audioconcat": "^0.1.4",
+    "axios": "^0.21.1",
+    "chalk": "^4.1.2",
+    "discord.js": "^13.0.0",
+    "form-data": "^4.0.0",
+    "google-tts-api": "^2.0.2",
+    "humanize-duration": "^3.27.0",
+    "image-pixels": "^2.2.2",
+    "jsdom": "^16.5.3",
+    "jsqr": "^1.4.0",
+    "languagedetect": "^2.0.0",
+    "links-finder": "^1.0.0",
+    "promise-mysql": "^5.0.3",
+    "sha.js": "^2.4.11",
+    "xml-js": "^1.6.11"
+  }
+}
