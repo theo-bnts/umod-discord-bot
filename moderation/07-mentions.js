@@ -7,6 +7,5 @@ export async function run (client, message, settings) {
         return processDeletion(message, 'nombreuses mentions')
 
     if (!message.mentions.everyone && (message.content?.includes('@everyone') || message.content?.includes('@here')))
-        return processDeletion(message, '@everyone / @here')
-
+        return processDeletion(message, 'mention(s) non-autorisée(s)')
 }
