@@ -19,7 +19,7 @@ export async function run (client, message, settings) {
         if (!settings.authorized_domains?.split(',').some(d => hostname.endsWith(d))) {
 
             if (settings.blocked_domains?.split(',').some(d => hostname.endsWith(d)))
-                return processDeletion(message, 'lien: bloqué')
+                return warn(message, 'lien: bloqué', settings)
 
 
             if (req?.data) {
@@ -62,7 +62,7 @@ export async function run (client, message, settings) {
                     })
 
                 if (attributes.at().probability >= settings.text_moderation_percent)
-                    return processDeletion(message, `lien: ${attributes.at().name} (${attributes.at().probability}%)`)
+                    return warn(message, `lien: ${attributes.at().name} (${attributes.at().probability}%)`, settings)
             }
 
 
@@ -75,7 +75,7 @@ export async function run (client, message, settings) {
             })
 
             if (analysis.lookup_results.detected_by >= 1)
-                return processDeletion(message, 'lien: malicieux')
+                return warn(message, 'lien: malicieux', settings)
         }
     }
 }

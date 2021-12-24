@@ -121,12 +121,12 @@ export default async (client) => {
             .catch(() => {})
     }
 
-    global.processDeletion = async (message, reason) => {
+    global.warn = async (message, reason, settings) => {
 
-        if (!message.deletable || message.deleted || message.processDeletionAttempt)
+        if (!message.deletable || message.deleted || message.warnAttempt)
             return
         
-        message.processDeletionAttempt = true
+        message.warnAttempt = true
 
         reason = capitalize(
             reason
@@ -148,6 +148,9 @@ export default async (client) => {
             })
                 .then(m => setTimeout(() => m.delete(), 15000))
 
+            if (settings.timeout && settings.timeout_seconds > 0) {
+                message.member.timeout(settings.timeout_seconds * 1000, reason)
+            }
         } catch (e) {}
 
         await client.database.query(`

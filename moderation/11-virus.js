@@ -64,7 +64,7 @@ export async function run (client, message, settings) {
             }
 
             if (analysis?.scan_results?.total_detected_avs >= 2)
-                return processDeletion(message, 'fichier: malicieux')
+                return warn(message, 'fichier: malicieux', settings)
         }
     }
 }

@@ -26,7 +26,7 @@ export async function run (client, message, settings) {
             if (data?.outputs?.at().data?.concepts?.length > 0)
                 for (const concept of data.outputs.at().data.concepts) {
                     if (settings.image_moderation_attributes.split(',').includes(concept.name) && concept.value >= settings.image_moderation_percent / 100)
-                        return processDeletion(message, `${concept.name} (${(concept.value * 100).toFixed(1)}%)`, settings.logs_channel, message.internal.URLs)
+                        return warn(message, `${concept.name} (${(concept.value * 100).toFixed(1)}%)`, settings)
                 }
 
         } catch (e) {}

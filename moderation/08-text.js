@@ -75,6 +75,6 @@ export async function run (client, message, settings) {
             })
 
         if (scores.at().probability >= settings.text_moderation_percent)
-            return processDeletion(message, `${scores.at().name} (${scores.at().probability}%)`)
+            return warn(message, `${scores.at().name} (${scores.at().probability}%)`, settings)
     }
 }

@@ -4,8 +4,8 @@ export async function run (client, message, settings) {
         return
 
     if (message.mentions.users.size + message.mentions.roles.size >= settings.mentions_moderation_count)
-        return processDeletion(message, 'nombreuses mentions')
+        return warn(message, 'nombreuses mentions', settings)
 
     if (!message.mentions.everyone && (message.content?.includes('@everyone') || message.content?.includes('@here')))
-        return processDeletion(message, 'mention(s) non-autorisée(s)')
+        return warn(message, 'mention(s) non-autorisée(s)', settings)
 }

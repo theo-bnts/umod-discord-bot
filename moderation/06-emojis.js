@@ -12,5 +12,5 @@ export async function run (client, message, settings) {
     emojiCount += (message.content.match(discordRegex) || []).length
 
     if (emojiCount >= settings.emoji_moderation_count)
-        return processDeletion(message, 'nombreux emojis')
+        return warn(message, 'nombreux emojis', settings)
 }

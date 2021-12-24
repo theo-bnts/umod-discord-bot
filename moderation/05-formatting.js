@@ -67,7 +67,7 @@ export async function run (client, message, settings) {
             option.length >= settings[key + '_minimum_length'] &&
             option.percent >= settings[key + '_minimum_percent']
         )
-            return processDeletion(message, 'formattage excessif: ' + option.translation)
+            return warn(message, 'formattage excessif: ' + option.translation, settings)
     }
 
     function createMarkdownRegex(operator) {

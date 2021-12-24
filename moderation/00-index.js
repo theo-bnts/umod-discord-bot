@@ -47,7 +47,7 @@ export async function run (client, message) {
                 .run(client, message, settings.at())
                 .catch((e) => log('yellow', 'soft error', e.stack))
                 
-            if (message.processDeletionAttempt || message.deleted)
+            if (message.warnAttempt || message.deleted)
                 return
         }
 

@@ -22,7 +22,7 @@ export async function run (client, message, settings) {
                 count++
 
             if (count >= splitedSegmentArray.length / 2.5)
-                return processDeletion(message, 'spam')
+                return warn(message, 'spam', settings)
 
         }
     }
