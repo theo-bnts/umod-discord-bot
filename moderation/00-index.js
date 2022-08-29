@@ -3,7 +3,7 @@ import { Permissions, MessageEmbed } from 'discord.js'
 
 export async function run (client, message) {
 
-    if (message.author.bot)
+    if (message.author.system || message.author.bot)
         return
 
     if (message.channel.type === 'DM')
