@@ -115,7 +115,7 @@ export default async (client) => {
             if (params.message?.attachments?.length > 0) embed.addField('Attachements', Formatters.codeBlock(params.message.attachments.map(a => `[${a.name}](${a.url})`).join('\n---\n'), 1000))
             if (params.messagesLink) embed.addField('Messages', `[Voir en ligne](${params.messagesLink})\n*Suppression ${Formatters.time(datePlusDays(90), 'R')}*`)
         } else
-            embed.addField('Information', 'Pour voir l\'intégralité des logs, veuillez [définir ce salon en tant que "NSFW"](https://u-short.cf/r/discord-nsfw).') // https://support.discord.com/hc/fr/articles/115000084051-NSFW-Channels-and-Content#h_adc93a2c-8fc3-4775-be02-bbdbfcde5010
+            embed.addField('Information', 'Pour voir l\'intégralité des logs, veuillez [définir ce salon en tant que "NSFW"](https://support.discord.com/hc/fr/articles/115000084051-NSFW-Channels-and-Content#h_adc93a2c-8fc3-4775-be02-bbdbfcde5010).')
 
         logsChannel.send({embeds: [embed]})
             .catch(() => {})

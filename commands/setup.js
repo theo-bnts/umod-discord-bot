@@ -41,7 +41,7 @@ export default {
 
         } else if (options['clarifai-key']) {
 
-            replies.push('`' + options['clarifai-key'] + '` n\'est pas une clé Clarifai valide\n[Tutoriel](https://u-short.cf/r/tuto-clarifai)')
+            replies.push('`' + options['clarifai-key'] + '` n\'est pas une clé Clarifai valide\n[Tutoriel](https://medium.com/@theo_bnts/cr%C3%A9er-une-cl%C3%A9-dapi-clarifai-5c1f9eda72f7)')
 
         } else {
 
@@ -52,7 +52,7 @@ export default {
             `)
 
             if (!rows.at().clarifai_api_key)
-                replies.push('Pensez à ajouter une clé Clarifai afin de pouvoir utiliser la modération d\'images.\n[Tutoriel](https://u-short.cf/r/tuto-clarifai)')
+                replies.push('Pensez à ajouter une clé Clarifai afin de pouvoir utiliser la modération d\'images.\n[Tutoriel](https://medium.com/@theo_bnts/cr%C3%A9er-une-cl%C3%A9-dapi-clarifai-5c1f9eda72f7)')
         
         }
 
@@ -70,7 +70,7 @@ export default {
 
         } else if (options['metadefender-key']) {
 
-            replies.push('`' + options['metadefender-key'] + '` n\'est pas une clé MetaDefender valide\n[Tutoriel](https://u-short.cf/r/tuto-metadefender)')
+            replies.push('`' + options['metadefender-key'] + '` n\'est pas une clé MetaDefender valide\n[Tutoriel](https://medium.com/@theo_bnts/cr%C3%A9er-une-cl%C3%A9-dapi-metadefender-c8b81da1874f)')
 
         } else {
 
@@ -81,7 +81,7 @@ export default {
             `)
 
             if (!rows.at().metadefender_api_key)
-                replies.push('Pensez à ajouter une clé Metadefender afin de pouvoir utiliser la modération de liens & virus.\n[Tutoriel](https://u-short.cf/r/tuto-clarifai)')
+                replies.push('Pensez à ajouter une clé Metadefender afin de pouvoir utiliser la modération de liens & virus.\n[Tutoriel](https://medium.com/@theo_bnts/cr%C3%A9er-une-cl%C3%A9-dapi-metadefender-c8b81da1874f)')
         
         }
 
