@@ -1,3 +1,5 @@
+### ⚠️ Ce projet est déprécié et va être complètement réécrit.
+
 # UMod Bot
 ## Pourquoi ?
 Depuis plusieurs années, les contenus haineux ou indésirables sont de plus en plus présents sur les réseaux. Le réseau social Discord n'y fait pas exception. Des modérateurs humains ne peuvent être disponibles constamment.\
